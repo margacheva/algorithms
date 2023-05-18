@@ -9,10 +9,8 @@
 #         self.next = next
 class Solution:
     def getDecimalValue(self, head: ListNode) -> int:
-        ptr = head #дублируем список
-        s = '' #создаем пустую строку
-        while ptr != None: #проходимся по списку
-            s += str(ptr.val)#добавляем элементы в строку
-            ptr = ptr.next #переходим к следующему элементу
-        return int(s, 2) #используем встроенную функцию переводу в десятичную систему счисления и указываем,
-        # в какой системе находится число
+        s = ''
+        while head is not None:
+            s += str(head.val)
+            head = head.next
+        return int(s, 2)
