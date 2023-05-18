@@ -8,9 +8,8 @@
 #         self.next = next
 class Solution:
     def isPalindrome(self, head: Optional[ListNode]) -> bool:
-        new = []#созадем список
-        cur = head#создаем переменную, которая показывает, где мы находимся сейчас
-        while cur is not None: #проходимся по списку
-            new.append(cur.val) #добавляем каждый элемент в новый список
-            cur = cur.next #меняе местонахождение на следующий элемент
-        return new == new[::-1] #проверяе если списки равны
+        new = []
+        while head is not None:
+            new.append(head.val)
+            head = head.next
+        return new == new[::-1]
